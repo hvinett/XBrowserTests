@@ -20,12 +20,12 @@ namespace SeleniumSample
         {
             var driver = GetDriver(browser);
             driver.Navigate().GoToUrl("http://www.google.com");
-            driver.FindElement(By.Id("lst-ib")).SendKeys("Hello");
+            //driver.FindElement(By.Id("lst-ib")).SendKeys("Hello");
             var filePath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString()) + ".png";
             var screenshot = driver.GetScreenshot();
             screenshot.SaveAsFile(filePath);
             TestContext.AddResultFile(filePath);
-            driver.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
+            //driver.FindElement(By.Id("lst-ib")).SendKeys(Keys.Enter);
             driver.Quit();
         }
         
