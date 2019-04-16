@@ -63,7 +63,7 @@ namespace SeleniumSample
             var path = Environment.GetEnvironmentVariable("GeckoWebDriver");
             if (!string.IsNullOrWhiteSpace(path))
             {
-                return new FirefoxDriver(path, new FirefoxOptions(), TimeSpan.FromMinutes(2));
+                return new FirefoxDriver(path);
             }
             else
             {
